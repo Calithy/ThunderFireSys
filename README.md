@@ -16,8 +16,6 @@
 -  ## okhttp ##
     > * 一个非常强大的网络请求库, 可以参考[http://blog.csdn.net/lmj623565791/article/details/47911083](http://blog.csdn.net/lmj623565791/article/details/47911083)
 
--  ## 效果图展示 ##
-   >  * ![](http://i.imgur.com/ofIBTSO.gif)
 
 
 
@@ -37,7 +35,4 @@
 	- transformer 转换器(我自己这样理解)
 	- url 链接地址的定义
 	- subsciriber 订阅者(观察者)
--  ## Thanks ##
-    hi大头鬼.  
-    鸿洋
 
