@@ -3,9 +3,34 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#FFFFFF</item>
+        <!--文字颜色-->
+        <item name="android:textColorPrimary">#0E0E0E</item>
+        <item name="colorPrimaryDark">#242425</item>
+        <item name="colorAccent">#05FA49</item>
+        <!--默认 Button,TextView的文字颜色-->
+        <item name="android:textColor">#FCFCFD</item>
+
+
+    </style>
+
+
+    <!--对话框透明背景-->
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--提示框背景（透明）-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+
     </style>
 
 </resources>

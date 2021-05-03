@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 24
+    compileSdkVersion 29
     buildToolsVersion "24.0.2"
     defaultConfig {
-        applicationId "com.example.gs.mvpdemo"
-        minSdkVersion 15
-        targetSdkVersion 24
+        applicationId "com.ThunderFireSys"
+        minSdkVersion 17
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -17,19 +18,41 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.jakewharton:butterknife:5.1.1'
-    compile 'com.android.support:design:24.0.0'
-    compile 'com.squareup.okhttp3:okhttp:3.3.1'
-    compile 'io.reactivex:rxjava:1.1.9'
-    compile 'io.reactivex:rxandroid:1.2.1'
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
-    compile 'com.squareup.retrofit2:retrofit-converters:2.1.0'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'junit:junit:4.12'
+    implementation "org.mockito:mockito-core:3.0.0"
+    androidTestImplementation "org.mockito:mockito-android:3.0.0"
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible,GradleCompatible
+    implementation 'com.android.support:appcompat-v7:22.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+    //noinspection GradleCompatible,GradleCompatible,GradleCompatible
+    implementation 'com.android.support:design:23.1.1'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'io.reactivex:rxjava:1.1.9'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit-converters:2.8.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2'
+
+    //Glide实现图片操作的库，要求compileJdk 最低27
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 }

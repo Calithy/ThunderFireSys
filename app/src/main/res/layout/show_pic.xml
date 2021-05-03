@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:tooltipText="@string/app_name_C"
+    android:textAlignment="textStart"
+  >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:padding="3dp"
+        android:paddingLeft="3dp"
+        android:text="@string/app_name_C"
+        android:background="@color/cardview_dark_background" />
+    <ImageButton
+        android:id="@+id/exit"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignRight="@id/title"
+        android:background="@drawable/exit" />
+
+    <com.DLUT.ThunderFire.Sys.view.MyGridView
+        android:id="@+id/pic_grid"
+        android:layout_below="@id/title"
+        android:layout_margin="12dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/border"
+        android:numColumns="3" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:layout_toRightOf="@id/pic_grid"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/border"
+        android:orientation="vertical"
+       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="操   作"
+            android:layout_margin="12dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorop"/>
+
+
+        <Button
+            android:id="@+id/begin"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textColor="@color/colorop"
+            android:background="@color/buttonGreen"
+            android:text="开   始"
+
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            />
+        <Button
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textColor="@color/colorop"
+            android:background="@color/buttonRed"
+            android:text="上一批"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_margin="5dp"
+            >
+
+        </Button>
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:textColor="@color/colorop"
+            android:background="@color/buttonGreen"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:text="下一批">
+        </Button>
+    </LinearLayout>
+
+
+</RelativeLayout>
